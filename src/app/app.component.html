@@ -1,0 +1,46 @@
+<h1>Multi selected dropdown</h1>
+
+
+     <div style="width: 50%;float: left;">
+        <div style="padding: 10px;">
+            <label>Multiselect countries bindings</label>
+        <ng-select [items]="countries"
+                   bindLabel="name"
+                   bindValue="id"
+                   [multiple]="true"
+                   placeholder="Select countries"
+                   [(ngModel)]="selectedCountyIds">
+        </ng-select>
+        <p>
+            Selected Countries: {{selectedCountyIds}}
+        </p>
+        </div>
+        
+    </div>
+     <div style="width: 50%;float: left;">
+        <div style="padding: 10px;">
+            <label>Custom tags</label>
+            <ng-select [items]="users"
+                       bindLabel="name"
+                       bindValue="id"
+                       [addTag]="addCustomUser"
+                       [multiple]="true"
+                       placeholder="Select user or add custom tag"
+                       [(ngModel)]="selectedUserIds">
+            </ng-select>
+            <p>
+                Selected user: {{selectedUserIds}}
+            </p>
+        </div>
+       
+    </div>
+   
+       
+      
+   
+        
+     
+   
+       
+   
+       
